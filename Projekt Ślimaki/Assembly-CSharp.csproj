@@ -118,16 +118,16 @@
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>C:/Users/Ama/Downloads/ProjektSlimaki-master/ProjektSlimaki-master/Projekt Ślimaki/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/Ama/Documents/Ślimaki/ProjektSlimaki/Projekt Ślimaki/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/Ama/Downloads/ProjektSlimaki-master/ProjektSlimaki-master/Projekt Ślimaki/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ama/Documents/Ślimaki/ProjektSlimaki/Projekt Ślimaki/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>C:/Users/Ama/Downloads/ProjektSlimaki-master/ProjektSlimaki-master/Projekt Ślimaki/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>C:/Users/Ama/Documents/Ślimaki/ProjektSlimaki/Projekt Ślimaki/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/Ama/Downloads/ProjektSlimaki-master/ProjektSlimaki-master/Projekt Ślimaki/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/Ama/Documents/Ślimaki/ProjektSlimaki/Projekt Ślimaki/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>D:/Program Files/Unity/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>

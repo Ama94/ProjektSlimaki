@@ -181,6 +181,7 @@ e1ea12ca952c81d81a9a21fdf34446ed UnityEngine.HoloLens.dll:UnityEngine.EventSyste
 98d69a140ec0084cde3b6a5e09aea295 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 dfd33ff9ae3ce8d7ca1f22b475ec2387 UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 aac9c55ae7ba4b95b852a7d9c191acd1 Unity.TextMeshPro.dll:TMPro.TextMeshProUGUI
+6fb1ed249ad1ba688daa9bf2641b42af Assembly-CSharp.dll:.SettingsMenu
 9c4eb4ec0fc11a711fdc1c8f1117255c Assembly-CSharp.dll:TMPro.Examples.Benchmark01_UGUI
 1b19a590a02b791cf7c287970cfab801 Assembly-CSharp.dll:TMPro.Examples.SkewTextExample
 0a006f3734181ba8b26758f0866152c0 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
@@ -200,4 +201,3 @@ e04611b8715e6833d2bd7010fc6be10b Unity.TextMeshPro.dll:TMPro.TMP_StyleSheet
 d6847627ba7741c18a9d5258fc293648 Assembly-CSharp.dll:TMPro.Examples.VertexShakeA
 dd223b2cbb523615eee8980d99d61ddd Assembly-CSharp.dll:.EnvMapAnimator
 93307bd34e39d73fd24e00ec39c25a91 Unity.TextMeshPro.dll:TMPro.TMP_SubMesh
-6fb1ed249ad1ba688daa9bf2641b42af Assembly-CSharp.dll:.SettingsMenu

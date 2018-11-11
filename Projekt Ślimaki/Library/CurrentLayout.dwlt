@@ -91,8 +91,8 @@ MonoBehaviour:
     y: 0
     width: 264
     height: 436
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -254,8 +254,8 @@ MonoBehaviour:
     y: 0
     width: 803
     height: 436
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -291,7 +291,7 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fe52faff
+    m_SelectedIDs: 
     m_LastClickedID: -371970
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
@@ -538,15 +538,15 @@ MonoBehaviour:
   m_LastFolders:
   - Assets
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: "C:\\Users\\Ama\\Downloads\\ProjektSlimaki-master\\ProjektSlimaki-master\\Projekt
+  m_LastProjectPath: "C:\\Users\\Ama\\Documents\\\u015Alimaki\\ProjektSlimaki\\Projekt
     \u015Alimaki"
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ae2a0000
-    m_LastClickedID: 10926
-    m_ExpandedIDs: 00000000ae2a0000ba2c0000bc2c0000002d00001a2e0000ca2e00005030000000ca9a3bffffff7f
+    m_SelectedIDs: 3c2a0000
+    m_LastClickedID: 10812
+    m_ExpandedIDs: 000000003c2a0000482c00004a2c00008e2c0000a82d0000582e0000e62f000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -574,7 +574,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ae2a0000ba2c0000bc2c0000002d00001a2e000050300000
+    m_ExpandedIDs: 000000003c2a0000482c00004a2c00008e2c0000a82d0000582e0000e62f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -692,7 +692,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 8e49f9ff044af9ff704bf9ff7a4bf9ff824bf9ff8e4bf9ff2ea6f9ffa4a6f9ff10a8f9ff1aa8f9ff22a8f9ff2ea8f9ff08daf9ff7edaf9ffeadbf9fff4dbf9fffcdbf9ff08dcf9ff0616faff7a16faffe617fafff017fafff817faff0418faff4ad7faffbed7faff2ad9faff34d9faff3cd9faff48d9fafff4acfbff68adfbffd4aefbffdeaefbffe6aefbfff2aefbff8ce5fbff00e6fbff6ce7fbff76e7fbff7ee7fbff8ae7fbffec23fcff6024fcffcc25fcffd625fcffde25fcffea25fcff408cfcffb48cfcff228efcff2c8efcff348efcff408efcffa6cdfcffa8cdfcff50f5fcff54f5fcfffc23fdff7024fdffde25fdffe425fdffec25fdfff825fdffa6e3fdff1ae4fdff88e5fdff8ee5fdff96e5fdffa2e5fdff0e18feff8218fefff019fefff619fefffe19feff0a1afeff761cfeffea1cfeff581efeff5e1efeff661efeff721efefff68dfeff6a8efeffd88ffeffde8ffeffe68ffefff28ffeffce4bffff424cffffb04dffffb64dffffbe4dffffca4dffff6a50ffffde50ffff4c52ffff5252ffff5a52ffff6652ffffc086ffff3487ffffaa88ffffb088ffffb888ffffc488ffffacf5ffff20f6ffff9af7ffffa0f7ffffa8f7ffffb4f7ffff7cf9ffff00000000123400004637000046420000fa42000060430000d04a0000225c0000ae650000f46d0000da76000018810000968c00009897000014980000e0a3000012a4000032bb000034ca0000f0ca000068cb000072d6000004e70000bee7000028e80000
+    m_ExpandedIDs: 92f8ffff02f9ffff6efaffff78faffff80faffff8cfaffffe4fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
