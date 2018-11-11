@@ -393,6 +393,10 @@ PlayerSettings:
   switchAllowsVideoCapturing: 1
   switchAllowsRuntimeAddOnContentInstall: 0
   switchDataLossConfirmation: 0
+<<<<<<< HEAD
+=======
+  switchUserAccountLockEnabled: 0
+>>>>>>> slimaki_Ama
   switchSupportedNpadStyles: 3
   switchNativeFsCacheSize: 32
   switchIsHoldTypeHorizontal: 0
