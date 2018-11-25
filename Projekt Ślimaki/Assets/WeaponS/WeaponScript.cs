@@ -6,10 +6,16 @@ public class WeaponScript : MonoBehaviour {
 
     public Transform firePoint;
     public GameObject BulletShotgunPrefab;
+    public AudioSource audio;
+    private Snail snail;
+    // Update is called once per frame
 
-	// Update is called once per frame
-	void Update () {
-        if (Input.GetKeyDown(KeyCode.X))
+    private void Start()
+    {
+        snail = GetComponentInParent(typeof(Snail)) as Snail;
+    }
+    void Update () {
+        if (Input.GetKeyDown(KeyCode.X) && snail.isItThisSnailTurn())
         {
             Shoot();
         }
@@ -17,6 +23,7 @@ public class WeaponScript : MonoBehaviour {
 
     private void Shoot()
     {
+        audio.Play();
         Instantiate(BulletShotgunPrefab,firePoint.position,firePoint.rotation);
 
     }

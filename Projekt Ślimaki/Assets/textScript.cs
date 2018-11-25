@@ -5,14 +5,25 @@ using UnityEngine;
 public class textScript : MonoBehaviour {
 
 
-    public SnailMovement snail;
+    private Snail snail;
     // Use this for initialization
     static private int i = 1;
-	
-	// Update is called once per frame
-	void Update () {
-        transform.position.Set(i++,i++, 0f);
-        Debug.Log("X = " + snail.transform.position.x + "Y = " + snail.transform.position.y);
+
+    private void Start()
+    {
+        snail = this.GetComponentInParent(typeof(Snail)) as Snail;
+    }
+    // Update is called once per frame
+    void Update () {
+
+        if(snail.getIsFacinLeft())
+        {
+            this.transform.Rotate(0f, 0f, 0f);
+        }
+        if(!snail.getIsFacinLeft())
+        {
+            this.transform.Rotate(0f, -180f, 0f);
+        }
         
 	}
 }
