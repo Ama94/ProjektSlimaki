@@ -13,6 +13,12 @@ public class BulletScript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Snail snail = collision.GetComponent<Snail>();
+        if(snail!=null)
+        {
+            snail.getHit(100);
+    
+        }
             Destroy(gameObject);
     }
 }

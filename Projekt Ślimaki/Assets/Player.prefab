@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerName: Player1
   numberOfSnails: 2
-  snailePrefab: {fileID: 1076240386362934, guid: 8af3cce13bab7b94cb7491afdb509b4e,
+  snailePrefab: {fileID: 1387724937223372, guid: 130dbe4588a332d4da8bc1fcfd517f85,
     type: 2}
   team: []
   isItMyTurn: 0

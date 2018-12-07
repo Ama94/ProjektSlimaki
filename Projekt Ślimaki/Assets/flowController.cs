@@ -30,18 +30,6 @@ public class flowController : MonoBehaviour {
         }
     }
 
-    public void setPlayer1()
-    {
-        players[0].isItMyTurn = true;
-        players[1].isItMyTurn = false;
-    }
-
-    public void setPlayer2()
-    {
-        players[0].isItMyTurn = false;
-        players[1].isItMyTurn = true;
-    }
-
     public Player[] getPlayers()
     {
         return players;

@@ -6,10 +6,11 @@ using UnityEngine;
 public class TimerScript : MonoBehaviour
 {
 
-
+    public static bool afterShootingTurn = false;
     public Text textPool;
     private float startingTime = 5f;
     private float waitingTime = 5f;
+    private float afterShootingTime = 3f;
     public flowController flowController;
 
 
@@ -21,16 +22,14 @@ public class TimerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        startingTime -= Time.deltaTime;
-        timeAlertState(startingTime);
-        textPool.text = "Your turn: " + (int)startingTime;
-        if (startingTime <= 0f)
-        { 
-            resetTimer();
-
+        if (afterShootingTurn == false)
+        {
+            timeTicking();
         }
-        
+        else
+        {
+            timerAfterShoot();
+        }
     }
 
     private void timeAlertState(float t)
@@ -45,6 +44,17 @@ public class TimerScript : MonoBehaviour
         }
     }
 
+    private void timeTicking()
+    {
+        startingTime -= Time.deltaTime;
+        timeAlertState(startingTime);
+        textPool.text = "Your turn: " + (int)startingTime;
+        if (startingTime <= 0f)
+        {
+            resetTimer();
+        }
+    }
+
     private void resetTimer()
     {
         textPool.color = Color.yellow;
@@ -55,8 +65,31 @@ public class TimerScript : MonoBehaviour
         if (waitingTime <= 0f)
         {
             flowController.nextPlayer();
-            startingTime = 20f;
-            waitingTime = 5f;
+            defaultTime();
+        }
+    }
+
+    private void defaultTime()
+    {
+        startingTime = 20f;
+        waitingTime = 5f;
+    }
+
+    public void timerAfterShoot()
+    {
+        textPool.color = Color.green;
+        afterShootingTime -= Time.deltaTime;
+        textPool.text = "Hide! Your turn ends in: " + (int)afterShootingTime;
+        if (afterShootingTime <= 0f)
+        {
+            startingTime = 0f;
+            flowController.resetPlayers();
+            //flowController.nextPlayer();
+            afterShootingTurn = false;
+            afterShootingTime = 3f;
+            {
+                resetTimer();
+            }
         }
     }
 }

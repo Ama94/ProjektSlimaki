@@ -63,10 +63,10 @@
   <ItemGroup>
     <Compile Include="Assets\flowController.cs" />
     <Compile Include="Assets\Player.cs" />
+    <Compile Include="Assets\RocketScript.cs" />
     <Compile Include="Assets\Scripts\BulletScript.cs" />
     <Compile Include="Assets\Scripts\Buttons Scripts\MainMenuButtonsScript.cs" />
     <Compile Include="Assets\Scripts\Snail.cs" />
-    <Compile Include="Assets\switchPlayer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

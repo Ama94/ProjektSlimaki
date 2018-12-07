@@ -15,11 +15,14 @@ public class Snail : MonoBehaviour {
     private float calculatedMoveSpeed;
     public Animator animator;
     private string snailName;
+    public WeaponScript weaponScript;
+    
 
     private int HP;
     private bool isStillAlive;
     private bool isItPlayerTurn;
     private bool isItThisSnailTurnNow;
+    
 
 
     public LayerMask groundLayers;
@@ -30,7 +33,8 @@ public class Snail : MonoBehaviour {
         HP = 100;
         isStillAlive = true;
         isItPlayerTurn = false;
-        isItThisSnailTurnNow = false;  
+        isItThisSnailTurnNow = false;
+        snailName = "Snail";
 	}
 	
 	// Update is called once per frame
@@ -41,20 +45,28 @@ public class Snail : MonoBehaviour {
         detectFalling();
         if (isItPlayerTurn)
         {
+            weaponScript.showWeapon();
             float horizontal = Input.GetAxis("Horizontal");
             Flip(horizontal);
             movementOfPlayer();
             animator.SetFloat("speed", Mathf.Abs(Input.GetAxis("Horizontal") * speed));
+        }
+        else
+        {
+            weaponScript.hideWeapon();
         }
         
     }
 
     private void Flip(float horizontal)
     {
+        textScript text = this.GetComponentInChildren(typeof(textScript)) as textScript;
         if(horizontal < 0 && !isFacingLeft || horizontal >0 && isFacingLeft)
         {
             isFacingLeft = !isFacingLeft;
-            transform.Rotate(0f, 180f,0f);
+            this.transform.Rotate(0f, 180f,0f);
+            text.transform.Rotate(0f, -180f, 0f);
+            text.transform.Translate(new Vector3(-2f, 0f));
                 }
     }
 
@@ -106,10 +118,12 @@ public class Snail : MonoBehaviour {
     public void getHit(int damage)
     {
         HP -= damage;
+        animator.SetTrigger("gotHit");
         if(HP<=0)
         {
-            isStillAlive = false;
+            Death();
         }
+       
     }
     
 
@@ -140,5 +154,20 @@ public class Snail : MonoBehaviour {
     public bool getIsFacinLeft()
     {
         return isFacingLeft;
+    }
+
+    public string getSnailName()
+    {
+        return snailName;
+    }
+    public int getSnailHP()
+    {
+        return HP;
+    }
+    public void Death()
+    {
+        animator.SetBool("isDead", true);
+        isStillAlive = false;
+        weaponScript.removeWeapon();
     }
 }

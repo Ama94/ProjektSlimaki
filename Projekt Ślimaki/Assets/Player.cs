@@ -58,6 +58,11 @@ public class Player : MonoBehaviour {
         {
             team[lastUsedSnail].setTurnOn();
         }
+        if(team[lastUsedSnail].isThisSnailAlive() == false)
+        {
+            incrementLastUsedSnail();
+            nextSnailTurn();
+        }
         if(lastUsedSnail == numberOfSnails)
         {
             lastUsedSnail = 0;
