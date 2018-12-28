@@ -14,7 +14,8 @@ public class WeaponScript : MonoBehaviour {
 
     public Sprite rifle;
     public Sprite rocketLauncher;
-   
+
+    private float tempSpeed;
     // Update is called once per frame
 
     private void Start()
@@ -26,32 +27,44 @@ public class WeaponScript : MonoBehaviour {
 
     }
     void Update () {
-        if (Input.GetKeyDown(KeyCode.X) && snail.isItThisSnailTurn() && TimerScript.afterShootingTurn == false)
+
+        if (Input.GetKey(KeyCode.X) && snail.isItThisSnailTurn() && TimerScript.afterShootingTurn == false)
         {
+            tempSpeed+=0.2f;
+
+           
+        }
+        if (Input.GetKeyUp(KeyCode.X) == true && snail.isItThisSnailTurn() && TimerScript.afterShootingTurn == false)
+        {
+           
             Shoot();
+            tempSpeed = 1;
             TimerScript.afterShootingTurn = true;
         }
         if (Input.GetKeyDown(KeyCode.Keypad1) && snail.isItThisSnailTurn())
         {
-            Debug.Log("1");
+         
             weaponSprite.sprite = rifle;
         }
         if (Input.GetKeyDown(KeyCode.Keypad2) && snail.isItThisSnailTurn())
         {
-            Debug.Log("2");
+
             weaponSprite.sprite = rocketLauncher;
         }
     }
 
     private void Shoot()
     {
-        audio.Play();
+        
         if (weaponSprite.sprite == rifle)
         {
+            audio.Play();
             Instantiate(BulletShotgunPrefab, firePoint.position, firePoint.rotation);
         }
         if(weaponSprite.sprite == rocketLauncher)
         {
+            RocketScript rocket = rocketPrefab.GetComponent(typeof(RocketScript)) as RocketScript;
+            rocket.speed = tempSpeed;
             Instantiate(rocketPrefab,firePoint.position,firePoint.rotation);
         }
 

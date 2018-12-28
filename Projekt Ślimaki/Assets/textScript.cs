@@ -10,17 +10,23 @@ public class textScript : MonoBehaviour {
     static private int i = 1;
     private bool flipped=true;
     public TextMesh text;
+    Color color;
 
 
 
     private void Start()
     {
+        color = snail.getColor();
+        Debug.Log(color);
+        text.color = color;
         //snail = this.GetComponentInParent(typeof(Snail)) as Snail;
-        
+
         //this.transform.Translate(new Vector3(4f, 3.9f));
     }
     // Update is called once per frame
     void Update () {
+         
+        //text.color = Color.cyan;
         text.text = snail.getSnailName() + "\n " + snail.getSnailHP();
         /*
 

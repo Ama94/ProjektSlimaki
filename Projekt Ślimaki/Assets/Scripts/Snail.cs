@@ -5,6 +5,7 @@ using UnityEngine;
 public class Snail : MonoBehaviour {
 
     public GameObject flowController;
+
     public float speed;
     public float jumpPower;
     public bool isGrounded;
@@ -22,6 +23,7 @@ public class Snail : MonoBehaviour {
     private bool isStillAlive;
     private bool isItPlayerTurn;
     private bool isItThisSnailTurnNow;
+    private Color color;
     
 
 
@@ -169,5 +171,21 @@ public class Snail : MonoBehaviour {
         animator.SetBool("isDead", true);
         isStillAlive = false;
         weaponScript.removeWeapon();
+    }
+    public void OnTriggerEnter2D(Collider2D collision)
+    {
+        
+        if(collision.gameObject.name == "LineOfWater")
+            {
+            this.Death();
+        }
+    }
+    public void setColor(Color color)
+    {
+        this.color = color;
+    }
+    public Color getColor()
+    {
+        return color;
     }
 }
