@@ -26,8 +26,7 @@ public class RocketScript : MonoBehaviour {
     {
         Vector3 hit = new Vector3(this.rb2d.transform.position.x, this.rb2d.transform.position.y);
         Instantiate(explosion, hit, Quaternion.Euler(0f, 0f, 0f));
-        Destroy(gameObject);
-        
+        Destroy(this.gameObject);
     }
 
     public void setSpeed()

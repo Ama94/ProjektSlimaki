@@ -174,8 +174,16 @@ public class Snail : MonoBehaviour {
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if(collision.gameObject.name == "LineOfWater")
+        if(collision.gameObject.tag == "LineOfWater")
+        {
+            this.Death();
+        }
+        if (collision.gameObject.tag == "WorldEdge")
+        {
+            this.Death();
+        }
+
+        if (collision.gameObject.name == "LineOfWater")
             {
             this.Death();
         }

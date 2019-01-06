@@ -2,46 +2,56 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Explosion : MonoBehaviour {
+public class Explosion : MonoBehaviour
+{
 
 
-    private float explosionRadius =500f;
-    private float speed = 30f;
-	// Use this for initialization
-	void Start () {
-        Destroy(this.gameObject, 2f);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
-    private void OnCollisionEnter2D(Collision2D collision)
+    private float explosionRadius = 4f;
+    private float speed = 15f;
+    public Rigidbody2D rb;
+    private bool cos = false;
+    private Collider2D[] hits;
+    public AudioSource sound;
+    //public ExplosionForce2D explosionForce;
+    // Use this for initialization
+
+    public void AddExplosionForce(Rigidbody2D body, float expForce, Vector3 expPosition, float expRadius)
     {
-        Debug.Log("BOOOOOOOOOOOOOOOOOOOOM");
-        Rigidbody2D rb = collision.otherRigidbody;
-        if(rb!=null && collision.gameObject.tag == "Snail")
-
+        var dir = (body.transform.position - expPosition);
+        float calc = 1 - (dir.magnitude / expRadius);
+        if (calc <= 0)
         {
-            Debug.Log("Explosion hits Snail");
-            Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, explosionRadius, LayerMask.NameToLayer("snailsLayer"));
-
-            foreach (Collider2D collider in hits)
-            { 
-                Debug.Log("Pracuje z colliderem");
-
-                //snail.getHit(25);
-                
-                Vector3 deltaPos = rb.gameObject.transform.position - this.transform.position;
-                Vector3 force = deltaPos.normalized * explosionRadius;
-                wypierdolWKosmos(deltaPos,force,rb);
-                
-            }
+            calc = 0;
         }
+
+        body.AddForce(dir.normalized * expForce * calc, ForceMode2D.Impulse);
     }
-     private void wypierdolWKosmos(Vector3 deltaPos, Vector3 force, Rigidbody2D rb)
+
+    void Start()
     {
-        rb.AddForce(Vector2.up * force * speed, ForceMode2D.Impulse);
+        Destroy(this.gameObject, 2.0f);
+        sound.Play();
     }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Snail snail = collision.GetComponent<Snail>();
+        if (snail != null)
+        {
+            snail.getHit(25);
+        }
+        flyAway(collision.GetComponent<Rigidbody2D>(), this.transform.position);
+    }
+    private void flyAway(Rigidbody2D rb, Vector3 deltaPos)
+    {
+        AddExplosionForce(rb, speed, deltaPos, explosionRadius);
+    }
+
+
 
 }
