@@ -4,16 +4,21 @@ using UnityEngine;
 
 public class WeaponMovementScript : MonoBehaviour
 {
+    private Snail snail;
+    public void Start()
+    {
+      snail = GetComponentInParent(typeof(Snail)) as Snail;
+    }
 
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow) && snail.isItThisSnailTurn())
         {
             transform.Rotate(0, 0, -1f);
         }
-        if (Input.GetKey(KeyCode.DownArrow))
+        if (Input.GetKey(KeyCode.DownArrow) && snail.isItThisSnailTurn())
         {
             transform.Rotate(0, 0, 1f);
         }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletScript : MonoBehaviour {
 
-    public float speed = 20f;
+    public float speed = 30f;
     public Rigidbody2D rb2d;
 	// Use this for initialization
 	void Start () {
@@ -13,6 +13,12 @@ public class BulletScript : MonoBehaviour {
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Destroy(gameObject);
+        Snail snail = collision.GetComponent<Snail>();
+        if(snail!=null)
+        {
+            snail.getHit(25);
+    
+        }
+            Destroy(gameObject);
     }
 }
