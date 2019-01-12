@@ -52,9 +52,8 @@ public class flowController : MonoBehaviour {
             nowActive = 0;
         }
         players[nowActive].isItMyTurn = true;
-        Debug.Log("Before " + players[nowActive].getLastUsedSnail());
         players[nowActive].incrementLastUsedSnail();
-        Debug.Log("Afteer " + players[nowActive].getLastUsedSnail());
+       
         nowActive++;
        
         /* if (nowActive < numberOfPlayers && nowActive>0)

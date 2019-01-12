@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
 
@@ -12,6 +13,7 @@ public class Player : MonoBehaviour {
     private int lastUsedSnail;
     private Snail snail;
     private Color color;
+    private int teamDeaths;
     
     // Use this for initialization
     void Start () {
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour {
         InitializeSnails(numberOfSnails, Random.Range(-3f,3f), Random.Range(-3f,2f), snailePrefab);
         isItMyTurn = false;
         lastUsedSnail = 0;
+        teamDeaths = 0;
        
 	}
 	
@@ -59,24 +62,33 @@ public class Player : MonoBehaviour {
 
     public void nextSnailTurn()
     {
-
-        if (lastUsedSnail == numberOfSnails)
+        teamDeaths = 0;
+        foreach(Snail snail in team)
         {
-            lastUsedSnail = 0;
-        }
-        if (team[lastUsedSnail].isThisSnailAlive())
-        {
-            team[lastUsedSnail].setTurnOn();
-        }
-
-        if (team[lastUsedSnail].isThisSnailAlive() == false)
-        {
-            do
+            if (snail.isThisSnailAlive() == false)
             {
-                incrementLastUsedSnail();
-            } while (team[lastUsedSnail].isThisSnailAlive()==false);
-            
-            nextSnailTurn();
+                teamDeaths +=1;
+            }
+        }
+        if (teamDeaths >= numberOfSnails) {
+            SceneManager.LoadScene("GameOver", LoadSceneMode.Single);
+        }
+        else
+        {
+            if (lastUsedSnail == numberOfSnails-1)
+            {
+                lastUsedSnail = 0;
+            }
+            if (team[lastUsedSnail].isThisSnailAlive())
+            {
+                team[lastUsedSnail].setTurnOn();
+            }
+
+            if (team[lastUsedSnail].isThisSnailAlive() == false)
+            {
+                //lastUsedSnail++;
+                nextSnailTurn();
+            }
         }
     }
 
@@ -90,6 +102,7 @@ public class Player : MonoBehaviour {
 
     public void incrementLastUsedSnail()
     {
+        
         if (lastUsedSnail < numberOfSnails)
         {
             lastUsedSnail++;

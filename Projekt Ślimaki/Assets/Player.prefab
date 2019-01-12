@@ -52,7 +52,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerName: Player1
-  numberOfSnails: 2
+  numberOfSnails: 3
   snailePrefab: {fileID: 1904747827114258, guid: 130dbe4588a332d4da8bc1fcfd517f85,
     type: 2}
   team: []

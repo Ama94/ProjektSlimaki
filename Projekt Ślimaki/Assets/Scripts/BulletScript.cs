@@ -16,7 +16,7 @@ public class BulletScript : MonoBehaviour {
         Snail snail = collision.GetComponent<Snail>();
         if(snail!=null)
         {
-            snail.getHit(25);
+            snail.getHit(100);
     
         }
             Destroy(gameObject);

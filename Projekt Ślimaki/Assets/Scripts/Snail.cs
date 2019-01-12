@@ -18,7 +18,8 @@ public class Snail : MonoBehaviour {
     private string snailName;
     public WeaponScript weaponScript;
     
-
+    
+    
     private int HP;
     private bool isStillAlive;
     private bool isItPlayerTurn;
