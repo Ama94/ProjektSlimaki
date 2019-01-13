@@ -75,7 +75,7 @@ public class Player : MonoBehaviour {
         }
         else
         {
-            if (lastUsedSnail == numberOfSnails-1)
+            if (lastUsedSnail == numberOfSnails)
             {
                 lastUsedSnail = 0;
             }
@@ -86,7 +86,7 @@ public class Player : MonoBehaviour {
 
             if (team[lastUsedSnail].isThisSnailAlive() == false)
             {
-                //lastUsedSnail++;
+                lastUsedSnail++;
                 nextSnailTurn();
             }
         }
