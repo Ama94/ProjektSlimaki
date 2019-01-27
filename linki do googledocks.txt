@@ -1,0 +1,5 @@
+projekt backlog + raporty z iteracji
+https://docs.google.com/spreadsheets/d/1LPr4f9g8Sw91OsdHkzpQ-pR4jeenaslNt_hVQpbVAXw/edit?usp=sharing
+
+test cases
+https://docs.google.com/spreadsheets/d/1j5o75BuPtlHK2uYMELKX7eol6Gs2mvMhvo1wdsc6uyU/edit?fbclid=IwAR3Lj_cVPA5eERrqx28MF9W19aSS9Z-KR8rI8IurP4-_GbQZp3-8Ofbede4#gid=759936528
