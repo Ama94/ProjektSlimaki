@@ -7,7 +7,7 @@ public class Explosion : MonoBehaviour
 
 
     private float explosionRadius = 4f;
-    private float speed = 15f;
+    private float speed = 10f;
     public Rigidbody2D rb;
     private bool cos = false;
     private Collider2D[] hits;
